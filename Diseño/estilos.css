@@ -9,7 +9,7 @@ body{
 }
 form{
     background-color:white;
-    width: 40%;
+    width: 30%;
     margin: auto;
     padding: 14px;
     margin-top: 23px;
@@ -58,7 +58,7 @@ label{
     width: 33%;
     height: 370px;
     margin: auto;
-    padding: 14px;
+    padding: 25px;
     margin-top: 70px;
     box-shadow: 23px 23px 83px 23px black;
     border-radius: 5px;

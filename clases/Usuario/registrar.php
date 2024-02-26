@@ -66,9 +66,9 @@ if (isset($_POST['Enviar'])){
         <input type="tel" name="telefono" id="" class="casilla">
         <label for="">Dirección</label>
         <input type="text" name="direccion" id="" class="casilla">
-        <input type="submit" value="Enviar" name="Enviar" class="casilla">
-        <label class="casilla" for="">Foto</label>
+        <label class="" for="">Foto</label>
         <input type="file" value="Insertar Imagen" name="imagen" class="casilla">
+        <input type="submit" value="Enviar" name="Enviar" class="casilla">
     </form>
 </body>
 </html>

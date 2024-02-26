@@ -11,7 +11,7 @@ class Trabajo extends Conexion{
         $this->conexion=$this->conexion->obtenerConexion();
     }
 
-    public function insertarHabitacion(string $codigo, string $numero, string $tipo, string $capacidad, string $precio, string $estado, string $descripcion, string $imagen):int{
+    public function RegistrarHabitacion(string $codigo, string $numero, string $tipo, string $capacidad, string $precio, string $estado, string $descripcion):int{
         $sql="INSERT INTO tipo_habitacion VALUES(:cod,:tip,:cap,:pre)";
         $sql2="INSERT INTO habitacion VALUES(:nro,:cod,:est,:descp, :imagen)";
         $consult=$this->conexion->prepare($sql);
@@ -24,7 +24,6 @@ class Trabajo extends Conexion{
         $consult2->bindValue(":nro",$numero);
         $consult2->bindValue(":est",$estado);
         $consult2->bindValue(":descp",$descripcion);
-        $consult2->bindValue(":imagen", $imagen);
         $resultado=$consult->execute();
         $resultado2=$consult2->execute();
 

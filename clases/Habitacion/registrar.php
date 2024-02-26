@@ -10,8 +10,7 @@ if(isset($_POST['Enviar'])){
     $precio=$_POST['precio'];
     $estado=$_POST['estado'];
     $descripcion=$_POST['descripcion'];
-    $imagen=$_POST['imagen'];
-    $valor=$dato->insertarHabitacion($codigo, $numero, $tipo, $capacidad, $precio, $estado, $descripcion, $imagen);
+    $valor=$dato->RegistrarHabitacion($codigo, $numero, $tipo, $capacidad, $precio, $estado, $descripcion);
 }
 else{
     

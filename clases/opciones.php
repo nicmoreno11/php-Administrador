@@ -60,6 +60,7 @@ nav{
     list-style: none;
     width: 200px;
     background-color: rgba(0, 195, 255, 0.664);
+    padding: 25px;
 }
 .menu-principal li:hover .submenu{
     display: block;
@@ -190,8 +191,8 @@ footer section i{
         <nav class="menu">
             <ul class="menu-principal">
                 <li><a href="Usuario/seleccionar.php">Usuarios</a></li>
-                <li><a href="Reserva/seleccionar.php">Habitaciones</a> </li>
-                <li><a href="Habitacion/seleccionar.php">Reservar</a></li>
+                <li><a href="Habitacion/seleccionar.php">Habitaciones</a> </li>
+                <li><a href="Reserva/seleccionar.php">Reservar</a></li>
                 <li><a href="../perfil.php">Mi Perfil</a></li>
                 <li><a href="../index.php">Cerrar Sesion</a></li>
             </ul>
