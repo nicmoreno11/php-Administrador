@@ -10,7 +10,8 @@ if(isset($_POST['Enviar'])){
     $precio=$_POST['precio'];
     $estado=$_POST['estado'];
     $descripcion=$_POST['descripcion'];
-    $valor=$dato->RegistrarHabitacion($codigo, $numero, $tipo, $capacidad, $precio, $estado, $descripcion);
+    $imagen=$_POST['imagen'];
+    $valor=$dato->RegistrarHabitacion($codigo, $numero, $tipo, $capacidad, $precio, $estado, $descripcion, $imagen);
 }
 else{
     
@@ -52,6 +53,8 @@ else{
         </select>
         <label for="">Descripción</label>
         <textarea class="casilla" name="descripcion" id="" cols="10" rows="0"></textarea>
+        <label for="">Imagen</label>
+        <input type="file" class="casilla" name="imagen">
         <input class="casilla" type="submit" value="Enviar" name="Enviar">
         </div>
     </form>

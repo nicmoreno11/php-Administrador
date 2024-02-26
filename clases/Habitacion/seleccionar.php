@@ -37,6 +37,7 @@ $total=$trabajo->traerTotalHabitacion();
                 <th>Número de habitación</th>
                 <th>Estado</th>
                 <th>Descripción</th>
+                <th>Imagen</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
@@ -52,6 +53,8 @@ $total=$trabajo->traerTotalHabitacion();
                     <td><?php echo $row['nro_hab'];?></td>
                     <td><?php echo $row['estado_hab'];?></td>
                     <td><?php echo $row['descripcion_hab'];?></td>
+                    <td><?php echo $row['imagen'];?></td>
+                    
                     <th>
                         <a href="editar.php?cod=<?php echo $row['cod_tipo_hab'];?>"><img src="../../imagenes/editar.png" alt=""></a>
                     </th>
