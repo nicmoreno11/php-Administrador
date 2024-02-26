@@ -6,6 +6,7 @@
     <title>Administrador</title>
     <link rel="icon" href="imagenes/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="../imagenes/logo.png">
 
 </head>
 <style>
@@ -19,7 +20,11 @@ body {
 }
 
 h1{
-    padding-left: 675px;
+    padding-left: 700px;
+}
+
+.titulo{
+    padding-left: 430px;
 }
 
 nav{
@@ -68,7 +73,6 @@ nav{
     text-decoration: none;
     padding: 15px 15px 15px 20px;
 }
-
 .contenido {
     padding: 20px;
 }
@@ -106,14 +110,15 @@ nav{
     text-align: center;
     transition: all 0.25s;
     background-color: #fff;
+    cursor: pointer;
 }
 .container .card:hover{
     transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 16px rgba(1,1.5,1,0.2);
 }
 .container .card img{
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    padding: 34px;
 }
 .container .card h4{
     font-weight: 600;
@@ -145,10 +150,11 @@ footer{
     width: 100%;
     left: 0;
     font-family: 'Nunito';
-    background-color:rgb(275, 275, 275);
     border-top: 1px solid #d7d7d7;
+    background-color:rgb(245, 245, 245-);
     height: 220px;
     padding-left: 25px;
+    padding: 25px;
 }
 footer section{
     display: table-cell;
@@ -176,6 +182,7 @@ footer section i{
     position: relative;
     top: 23px;
     margin-bottom: 12px;
+    
 }
 </style>
 <body>
@@ -188,10 +195,9 @@ footer section i{
                 <li><a href="../perfil.php">Mi Perfil</a></li>
                 <li><a href="../index.php">Cerrar Sesion</a></li>
             </ul>
-    </nav>
+        </nav>
     <div class="contenido">
         <p>Registrar nuevos usuarios, habitaciones y reservas en el sistema.</p><a href="https://www.sena.edu.co/es-co/sena/Paginas/quienesSomos.aspx">Nuestra pagina web</a>
-
     </div>
     <div class="container">
         <div class="card">
@@ -214,6 +220,18 @@ footer section i{
             <p>Podras registrar habitaciones nuevas, actualizarlas segun el estado y tambien su descripción</p>
             <a href="./Habitacion/registrar.php"><input type="button" value="Registrar"></a>
         </div>
+          <!---<div class="card">
+            <img src="../imagenes/habitaciones.png" alt="">
+            <h4>Habitaciones</h4>
+            <p>Podras registrar habitaciones nuevas, actualizarlas segun el estado y tambien su descripción</p>
+            <a href="./Habitacion/registrar.php"><input type="button" value="Registrar"></a>
+        </div>--->
+        <!---<div class="card">
+            <img src="../imagenes/habitaciones.png" alt="">
+            <h4>Habitaciones</h4>
+            <p>Podras registrar habitaciones nuevas, actualizarlas segun el estado y tambien su descripción</p>
+            <a href="./Habitacion/registrar.php"><input type="button" value="Registrar"></a>
+        </div>--->
     </div>
     <footer class="piepag">
          <section class="informacion">
@@ -238,6 +256,6 @@ footer section i{
             <p>© 2024 
             All Rights Reserved | Hotel Aurora Oasis | Powered by Cloudbeds</p>
         </div>
-        </footer>
+        </footer> 
 </body>
 </html

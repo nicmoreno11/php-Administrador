@@ -1,5 +1,5 @@
 <?php
-require_once("./Bd/conexion.php");
+require_once("conexion.php");
 //require_once('path/to/decrypt.php')
 class Trabajo extends Conexion{
     //private $datos;

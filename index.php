@@ -32,6 +32,7 @@
         <img class="" id="showPassword" src="imagenes/ojo.png" name="contraseña" alt="" onclick="togglePasswordVisibility()">
         <input class="texto" type="submit" value="Ingresar" name="Enviar">
         </div>
+        <a href="./clases/Usuario/registrar.php"><h2>Registrarse</h2></a>
     </form>
     </section>
     <section class="lado">

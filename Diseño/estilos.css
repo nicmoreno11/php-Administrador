@@ -23,6 +23,20 @@ h1{
     margin-left: 39px;
     margin-bottom: 17px;
 }
+
+h2 {
+
+    font-size: 15px;
+    padding-left: 30px;
+    font: bold;
+    color: #333;
+}
+
+h2 a {
+
+    text-decoration: none;
+}
+
 label{
     font-size: 18px;
     font-weight: bold;
@@ -84,7 +98,7 @@ input[type="submit"]{
     background-color: dodgerblue;
     font-size: 17px;
     font-weight: bold;
-    color: white;
+    color: #333;
     border: none;
     padding: 8px;
     cursor: pointer;
