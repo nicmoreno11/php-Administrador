@@ -1,0 +1,133 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: aliceblue;
+    font-family: 'Nonito', sans-serif;
+}
+    
+h1{
+    padding: 25px;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+.menu{
+    margin-top: -17px;
+    padding-left: 12px;
+    background-color: #fff;
+    padding: 25px;
+    font: bold;
+    background-color: white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul{ 
+    display: flex;
+    padding-left: 775px;
+    font-weight: bold;  
+}
+
+.menu li{
+    padding: 12px;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}*/
+                                                                                  
+/* Estilo actualizado del perfil, ignorar el de arriba ^ */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #555;
+    font-size: 15px;
+    font-family: 'Nonito', sans-serif;
+    font-weight: 50;
+}
+
+
+
+
+
+
+
+
+
+
+
+

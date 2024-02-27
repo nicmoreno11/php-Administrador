@@ -55,7 +55,8 @@ if (isset($_POST['Enviar'])){
         <label for="">Tipo de documento</label>
         <select name="tipo_doc" id="">
             <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
-            <option value="Cédula de extranjería">Cédula de extranjería</option>
+            <option value="Cédula de extranjería">Tarjeta Identidad</option>
+            <option value="Pasaporte">Cedula Extranjería</option>
             <option value="Pasaporte">Pasaporte</option>
         </select>
         <label for="">Nombres</label>

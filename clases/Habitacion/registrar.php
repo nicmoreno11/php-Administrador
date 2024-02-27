@@ -36,7 +36,7 @@ else{
         <label for="">Número de habitación</label>
         <input class="casilla" type="number" name="numero" id="">
         <label for="">Tipo de habitación</label>
-        <select class="casilla" name="tipo" id="">
+        <select class="casilla" name="tipo" id="" required>
             <option value="Sencilla">Sencilla</option>
             <option value="Doble">Doble</option>
             <option value="Twin">Twin</option>
@@ -55,7 +55,7 @@ else{
         <textarea class="casilla" name="descripcion" id="" cols="10" rows="0"></textarea>
         <label for="">Imagen</label>
         <input type="file" class="casilla" name="imagen">
-        <input class="casilla" type="submit" value="Enviar" name="Enviar">
+        <input type="submit" class="casilla" value="Enviar">
         </div>
     </form>
 

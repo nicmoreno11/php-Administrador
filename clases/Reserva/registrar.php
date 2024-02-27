@@ -34,7 +34,7 @@ if(isset($_POST['Enviar'])){
             <input type="text" name="cod_tipo" id="" class="casilla">
         <label for="">Número de documento</label>
             <input type="text" name="num_doc" id="" class="casilla">
-        <input type="submit" value="Enviar" name="Enviar" class="casilla">
+        <input type="submit" value="Enviar" name="Enviar" class="casilla"><br>
     </form>
 </body>
 </html>

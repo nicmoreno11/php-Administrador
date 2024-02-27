@@ -26,7 +26,7 @@ $total=$trabajo->traerTotalReserva();
                 <th colspan="7">
                     <h2>Reservas</h2>
                 </th>
-                <th><a href="registrar.php"><img src="../../imagenes/mas.png" alt=""></a></th>
+                <th><a href="registrar.php"><img src="../../imagenes/Adicionar.png" alt=""></a></th>
             </tr>
         
             <tr>
@@ -51,10 +51,10 @@ $total=$trabajo->traerTotalReserva();
                     <td><?php echo $row['cod_tipo_hab'];?></td>
                     <td><?php echo $row['num_doc'];?></td>
                     <th>
-                        <a href="editar.php?cod=<?php echo $row['cod_reserva'];?>"><img src="../../imagenes/editar.png" alt=""></a>
+                        <a href="editar.php?cod=<?php echo $row['cod_reserva'];?>"><img src="../../imagenes/actualizar.png" alt=""></a>
                     </th>
                     <th>
-                        <a class="eliminar" id="eliminar" onclick='return confirmacion()' href="eliminar.php?cod=<?php echo $row['cod_reserva'];?>"><img src="../../imagenes/dele.png" alt=""></a>
+                        <a class="eliminar" id="eliminar" onclick='return confirmacion()' href="eliminar.php?cod=<?php echo $row['cod_reserva'];?>"><img src="../../imagenes/eliminar.png" alt=""></a>
                     </th>
                 </tr>
             <?php } ?>

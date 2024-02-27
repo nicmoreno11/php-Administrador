@@ -31,14 +31,14 @@ class Trabajo extends Conexion{
         if ($resultado>0){
             if($resultado2>0){
                 echo "<script type='text/javascript'>
-            alert('Registro adicionado correctamente...');
+            alert('Habitacion registrada correctamente...');
             window.location='seleccionar.php';
             </script>";
         
             }
         else{
             echo "<script type='text/javascript'>
-			echo ('error En la asignacion del registro.....');
+			echo ('error En la asignacion del la habitacion.....');
 			window.location='seleccionar.php';
 			</script>";
         }
