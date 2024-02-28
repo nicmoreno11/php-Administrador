@@ -43,6 +43,8 @@ class Trabajo extends Conexion{
 			</script>";
         }
     }
+
+
 }
 
     public function insertarUsuario(string $correo, string $contraseña, string $imagen, string $num_doc, string $tipo_doc, string $nombres, string $apellidos, string $telefono, string $direccion, string $tipo_usuario):int{
@@ -348,6 +350,7 @@ class Trabajo extends Conexion{
                 }   
             }
     }
+
 }
 ?>
 <style>

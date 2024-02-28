@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(245, 245, 245);
+}
+.logo{
+    position: absolute;
+    max-width: 55px;
+    left: 23px;
+    top: 10px;
+    z-index: 2;
+}
+header{
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    margin-top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    font-family: 'Nunito','sans-serif';
+    z-index: 1;
+    font-size: 18px;
+    background-color: white;
+    box-sizing: border-box;
+}
+.menu-principal{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 94px;
+}
+.menu-principal>li>a{
+    display: block;
+    padding: 30px 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-principal>li:hover{
+    background-color: deepskyblue;
+}
+.submenu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 191, 255, 0.664);
+}
+.menu-principal li:hover .submenu{
+    display: block;
+}
+.submenu li:hover{
+    background-color: deepskyblue;
+}
+.submenu li a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 18vh;
+}
+.busqueda{
+    /*text-align: left;¨*/
+    margin-left: 100px;;
+}
+
+.fecha{
+    width: 390px;
+    padding: 8px;
+    border: 2px solid deepskyblue;
+    border-radius: 13px;
+    font-family: 'Nunito';
+    outline: none;
+}
+.botonre:hover{
+    background-color: dodgerblue;
+}
+.botonr:hover{
+    background-color: dodgerblue;
+}
+.botonb{
+    padding: 8px;
+    width: 159px;
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+    border-radius: 92px;
+    font-weight: bold;
+    font-family: 'Nunito';
+}
+.botonb:hover{
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+.habitaciones{
+    display: block;
+    align-items: flex-end;
+    height: 10px;
+}
+.habitacion img{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 230px;
+    height: 200px;
+    margin-left: 23px;
+    border-radius: 12px;
+}
+.habitacion{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(184, 184, 184);
+    width: 963px;
+    margin: 12px;
+    margin-left: 123px;
+    border-radius: 12px;
+}
+.habitacion button{
+    width: 123px;
+    height: 34px;
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+    border-radius: 23px;
+    position: relative;
+    top: 150px;
+    left: 170px;
+}
+.habitacion button a{
+    font-family: 'Nunito';
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.info{
+    font-family: 'Nunito';
+    margin: 30px 50px;
+}
+.botonr{
+    margin-left: 33px;
+}
+.botons:hover{
+    background-color: dodgerblue;
+}
+.alimento img{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 230px;
+    height: 200px;
+    margin-left: 23px;
+    border-radius: 12px;
+}
+.menur{
+    display: block;
+    align-items: flex-end;
+    height: 10px;
+}
+.alimento{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(184, 184, 184);
+    width: 963px;
+    margin: 12px;
+    margin-left: 123px;
+    border-radius: 12px;
+}
+.alimento button {
+    width: 100px;
+    height: 58px; /* Ajusta la altura del botón para dos líneas de texto */
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+    border-radius: 23px;
+    margin-left: auto;
+    margin-right: 80px;
+    margin-top: 100px;
+    display: block;
+}
+
+.alimento  button a {
+    font-family: 'Nunito';
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center; /* Alinea el texto en el centro del botón */
+    line-height: 15px; /* Ajusta la altura de línea según tus preferencias */
+    white-space: pre-wrap; /* Permite saltos de línea */
+}
+
+.servicios{
+    display: block;
+    align-items: flex-end;
+    height: 10px;
+}
+.servicio img{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 230px;
+    height: 230px;
+    margin-left: 23px;
+    border-radius: 12px;
+}
+.servicio{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(184, 184, 184);
+    width: 80%;
+    margin: 12px;
+    margin-left: 123px;
+    border-radius: 12px;
+}
+.servicio button{
+    width: 400px;
+    height: 58px;
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+    border-radius: 23px;
+    margin-right: 5px;
+    position: relative;
+    right: 45px;
+    margin-top: 100px;
+}
+.servicio button a {
+    font-family: 'Nunito';
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    line-height: 15px; 
+    white-space: pre-wrap;
+    position: relative;
+    right: 14px;
+}
+.botonres{
+    width: 500px;
+    height: 58px;
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+    border-radius: 23px;
+    position: relative;
+    margin-left: 95px;
+    right: 5px;
+    padding-right: 73px;
+}
+.licores{
+    display: block;
+    align-items: flex-end;
+    height: 10px;
+}
+.bebida img{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 130px;
+    height: 170px;
+    margin-left: 23px;
+    border-radius: 12px;
+}
+.bebida{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(184, 184, 184);
+    width: 963px;
+    margin: 12px;
+    margin-left: 123px;
+    border-radius: 12px;
+}
+.bebida button {
+    width: 100px;
+    height: 58px; /* Ajusta la altura del botón para dos líneas de texto */
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+    border-radius: 23px;
+    margin-left: auto;
+    margin-right: 80px;
+    margin-top: 100px;
+    display: block;
+}
+
+.bebida button a {
+    font-family: 'Nunito';
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center; /* Alinea el texto en el centro del botón */
+    line-height: 15px; /* Ajusta la altura de línea según tus preferencias */
+    white-space: pre-wrap; /* Permite saltos de línea */
+}
+
+.zonas{
+    display: block;
+    align-items: flex-end;
+    height: 10px;
+}
+.humeda img{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 230px;
+    height: 200px;
+    margin-left: 23px;
+    border-radius: 12px;
+}
+.humeda{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(184, 184, 184);
+    width: 963px;
+    margin: 12px;
+    margin-left: 123px;
+    border-radius: 12px;
+}
+.humeda button {
+    width: 100px;
+    height: 58px; /* Ajusta la altura del botón para dos líneas de texto */
+    background-color: deepskyblue;
+    border: 2px solid dodgerblue;
+    border-radius: 23px;
+    margin-left: auto;
+    margin-right: 80px;
+    margin-top: 100px;
+    display: block;
+}
+
+.humeda button a {
+    font-family: 'Nunito';
+    font-size: 14px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center; /* Alinea el texto en el centro del botón */
+    line-height: 15px; /* Ajusta la altura de línea según tus preferencias */
+    white-space: pre-wrap; /* Permite saltos de línea */
+}
+/* ... (Tu código CSS existente) ... */
+.botones-acciones {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espaciado entre los botones */
+    margin-top: 10px; /* Ajusta el margen superior según tu preferencia */
+}
+
+.boton-actualizar{
+    padding: 8px 16px; /* Ajusta el relleno de los botones según tu preferencia */
+    background-color: #4CAF50; /* Color de fondo del botón de actualizar */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boton-actualizar:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.botones-acciones-li {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espaciado entre los botones */
+    margin-top: 10px; /* Ajusta el margen superior según tu preferencia */
+}
+.boton-actualizar-li{
+    padding: 8px 16px; /* Ajusta el relleno de los botones según tu preferencia */
+    background-color: #4CAF50; /* Color de fondo del botón de actualizar */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boton-actualizar-li:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.botones-acciones-spa {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espaciado entre los botones */
+    margin-top: 10px; /* Ajusta el margen superior según tu preferencia */
+}
+
+.boton-actualizar-spa{
+    padding: 8px 16px; /* Ajusta el relleno de los botones según tu preferencia */
+    background-color: #4CAF50; /* Color de fondo del botón de actualizar */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.boton-actualizar-spa:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}
+.info{
+    font-family: 'Nunito';
+    margin: 30px 50px;
+}
+.botonr{
+    margin-left: -10px;
+}
+.botons{
+    margin-left: 40px; /* Elimina el margen izquierdo */
+    padding-left: 40px; /* Elimina el relleno izquierdo */
+}
+.botonres{
+    margin-left: 40px; /* Elimina el margen izquierdo */
+    padding-left: 40px; /* Elimina el relleno izquierdo */
+}
+
+.botonli{
+    margin-left: 40px; /* Elimina el margen izquierdo */
+    padding-left: 40px; /* Elimina el relleno izquierdo */
+}

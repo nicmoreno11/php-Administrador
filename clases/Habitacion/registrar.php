@@ -55,7 +55,7 @@ else{
         <textarea class="casilla" name="descripcion" id="" cols="10" rows="0"></textarea>
         <label for="">Imagen</label>
         <input type="file" class="casilla" name="imagen">
-        <input type="submit" class="casilla" value="Enviar">
+        <input type="submit" class="casilla" name="Enviar">
         </div>
     </form>
 

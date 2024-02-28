@@ -1,2 +1,9 @@
+Actualización 28/09/2024
 1. Falta añadir la interfaz de servicios y factura a la pagina del administrador, corregir algunos errores de registro en reservas. 
 2. Poner responsive a la pagina para que tenga un poco mas de experiencia de usuario. 
+3. Mobiliario, Servicios, Facturas -> falta interfaz. 
+4. El modulo de Servicios se añadio a la interfaz del administrador. 
+
+
+PENDIENTE: 
+falta hacer el formulario de registro de los servicios y hacer que se muestre como una tabla en la interfaz del administrador   

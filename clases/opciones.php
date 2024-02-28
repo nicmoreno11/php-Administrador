@@ -11,12 +11,13 @@
 <!-- Pagina vista del Administrador falta añadir Servicios y Factura aunque las tarjetas ya están-->
 <body>
     <header>
-    <a href="../index.php"><img src="../imagenes/logo.png" alt="" class="logo"></a>
+    <a href="opciones.php"><img src="../imagenes/logo.png" alt="" class="logo"></a>
         <nav class="menu"> 
             <ul class="menu-principal">
                 <li><a href="Usuario/seleccionar.php">Usuarios</a></li>
                 <li><a href="Habitacion/seleccionar.php">Habitaciones</a> </li>
-                <li><a href="Reserva/seleccionar.php">Reservar</a></li>
+                <li><a href="Reserva/seleccionar.php">Reservas</a></li>
+                <li><a href="Servicios/seleccionar.php">Servicios</a></li>
                 <li><a href="../perfil.php">Mi Perfil</a></li> <!--- Actualizar diseño del perfil de Administrador y tambien que pueda actualizar su perfil desde el perfil--->
                 <li><a href="../index.php">Cerrar Sesión</a></li> <!--- Salir a la pagina web del hotel no a al inicio de sesion--->
             </ul>
@@ -49,17 +50,25 @@
         <div class="card">
             <img src="../imagenes/restaurante.png" alt="">
             <h4>Servicios</h4>
-            <p>Observa los servicios que están disponibles, ya sean, restaurante, bar y entre otros.</p>
-            <a href=""><input type="button" value="Registrar"></a>
+            <p>Registrar los servicios que van a estar disponibles dentro del hotel</p>
+            <a href="./Servicios/registrar_serv.php"><input type="button" value="Ver"></a>
         </div>
+        <!--- Se adiciono servicios a la interfaz del administrador para que pueda ver los servicios disponibles que hay en el hotel -->
 
         <div class="card">
             <img src="../imagenes/factura.png" alt="">
             <h4>Facturas</h4>
             <p>Aquí estarán los detalles de cada factura con su respectiva política de privacidad de datos.</p>
-            <a href=""><input type="button" value="Registrar"></a>
+            <a href=""><input type="button" value="Ver"></a>
         </div>
 
+        <div class="card">
+            <img src="" alt="">
+            <h4>Mobiliario</h4>
+            <p>Aqui se encuentra la información de los muebles de cada habitación del hotel, el nombre y el estado del mueble</p>
+            <a href=""><input type="button" value="Ver"></a>
+        </div>
+        <!--- Se agrego el modeulo mobiliario en la interfaz del administrador --->
     </div>
     <footer class="piepag">
          <section class="informacion">
@@ -70,7 +79,7 @@
         <section class="informacion2">
             <h3>Contacto</h3>
             <a href=""><p>32569785211</p></a>
-            <a href="https://www.google.com/intl/es-419/gmail/about/"><p>administrador@sena.edu.co</p></a> <!--- Falta redireccionar al correo del Admin pero eso ya es opcional-->
+            <a href="https://www.google.com/intl/es-419/gmail/about/"><p>administrador@sena.edu.co</p></a> <!--- No tener en cuenta el enlace a la pagina de gmail--->
         </section>
         
         <section class="iconos">

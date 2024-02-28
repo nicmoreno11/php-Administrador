@@ -5,8 +5,8 @@ $trabajo = new Trabajo();
 $pagina_actual=isset($_GET['pagina'])? $_GET['pagina']:1;
 $resultados_por_pagina=10;
 $inicio=($pagina_actual-1)* $resultados_por_pagina;
-$datos = $trabajo->traerDatosHabitacion($inicio,$resultados_por_pagina);
-$total=$trabajo->traerTotalHabitacion();
+$datos = $trabajo->traerDatos($inicio,$resultados_por_pagina);
+$total=$trabajo->traerTotal();
 ?>
 
 <!DOCTYPE html>
@@ -16,27 +16,28 @@ $total=$trabajo->traerTotalHabitacion();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../imagenes/logo.png">
     <link rel="stylesheet" href="../../Diseño/estile.css">
-    <title>Habitaciones</title>
+    <title>Usuarios</title>
 </head>
 <body>
     <div class="contenedor-tabla">
     <table>
         <thead bgcolor="#8CAAF8">
             <tr>
-                <th colspan="8">
-                    <h2>Listado general de las habitaciones del hotel</h2>
+                <th colspan="9">
+                    <h2>Serivicios</h2>
                 </th>
-                <th><a href="registrar.php"><img src="../../imagenes/mas.png" alt=""></a></th>
+                <th><a href="registrar.php"><img src="../../imagenes/adicionar.png" alt=""></a></th>
             </tr>
         
             <tr>
-                <th>Código tipo habitación</th>
-                <th>Tipo de habitación</th>
-                <th>Capacidad</th>
-                <th>Valor base</th>
-                <th>Número de habitación</th>
-                <th>Estado</th>
-                <th>Descripción</th>
+                <th>Documento</th>
+                <th>Tipo documento</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Código usuario</th>
                 <th>Imagen</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
@@ -46,20 +47,20 @@ $total=$trabajo->traerTotalHabitacion();
             
             <?php foreach($datos as $row) { ?>
                 <tr>
-                    <td><?php echo $row['cod_tipo_hab'];?></td>
-                    <td><?php echo $row['nom_tipo_hab'];?></td>
-                    <td><?php echo $row['capacidad'];?></td>
-                    <td><?php echo $row['valor_base'];?></td>
-                    <td><?php echo $row['nro_hab'];?></td>
-                    <td><?php echo $row['estado_hab'];?></td>
-                    <td><?php echo $row['descripcion_hab'];?></td>
-                    <td><?php echo $row['imagen'];?></td>
-                    
+                    <td><?php echo $row['num_doc'];?></td>
+                    <td><?php echo $row['tipo_doc'];?></td>
+                    <td><?php echo $row['nombres'];?></td>
+                    <td><?php echo $row['apellidos'];?></td>
+                    <td><?php echo $row['correo_electronico'];?></td>
+                    <td><?php echo $row['telefono'];?></td>
+                    <td><?php echo $row['direccion'];?></td>
+                    <td><?php echo $row['cod_usuario'];?></td>
+                    <td><?php echo $row['foto'];?></td>
                     <th>
-                        <a href="editar.php?cod=<?php echo $row['cod_tipo_hab'];?>"><img src="../../imagenes/editar.png" alt=""></a>
+                        <a href="editar.php?cod=<?php echo $row['correo_electronico'];?>"><img src="../../imagenes/actualizar.png" alt=""></a>
                     </th>
                     <th>
-                        <a class="eliminar" id="eliminar" onclick='return confirmacion()' href="eliminar.php?cod=<?php echo $row['cod_tipo_hab'];?>"><img src="../../imagenes/dele.png" alt=""></a>
+                        <a href="eliminar.php?cod=<?php echo $row['correo_electronico'];?>" onclick='return confirmacion()'><img src="../../imagenes/eliminar.png" alt=""></a>
                     </th>
                 </tr>
             <?php } ?>
@@ -78,7 +79,6 @@ $total=$trabajo->traerTotalHabitacion();
             }
         }
     </script>
-
 
     <div style="text-align: center;">
     <a href="../opciones.php" class="linkregreso">Regresar</a>

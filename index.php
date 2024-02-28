@@ -9,8 +9,6 @@
         $dato->iniciar_sesion($email,$contraseña);
     
     }
-
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +28,7 @@
         <input type="email" name="correo" class="texto" placeholder="Email" id="">
         <input type="password" name="contraseña" class="texto" id="contraseña" placeholder="Contraseña">
         <img class="" id="showPassword" src="imagenes/ojo.png" name="contraseña" alt="" onclick="togglePasswordVisibility()">
-        <input class="texto" type="submit" value="Ingresar" name="Enviar">
+        <input class="texto" type="submit" value="Ingresar" name="Enviar" >
         </div>
     </form>
     </section>
