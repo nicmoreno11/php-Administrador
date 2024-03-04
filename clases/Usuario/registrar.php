@@ -5,7 +5,7 @@ $tipos=$dato->traerTipos();
 if (isset($_POST['Enviar'])){
     $correo=$_POST['correo'];
     $contraseña=$_POST['contraseña'];
-    $imagen=$_POST['imagen'];
+    $foto=$_POST['imagen'];
     $num_doc=$_POST['num_doc'];
     $tipo_doc=$_POST['tipo_doc'];
     $nombres=$_POST['nombres'];
@@ -13,7 +13,7 @@ if (isset($_POST['Enviar'])){
     $telefono=$_POST['telefono'];
     $direccion=$_POST['direccion'];
     $tipo_usuario=$_POST['tipo_usuario'];
-    $valor=$dato->insertarUsuario($correo, $contraseña, $imagen, $num_doc, $tipo_doc, $nombres, $apellidos, $telefono, $direccion, $tipo_usuario);
+    $valor=$dato->insertarUsuario($correo, $contraseña, $foto, $num_doc, $tipo_doc, $nombres, $apellidos, $telefono, $direccion, $tipo_usuario);
 }
 ?>
 <!DOCTYPE html>

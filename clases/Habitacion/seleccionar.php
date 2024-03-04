@@ -14,7 +14,7 @@ $total=$trabajo->traerTotalHabitacion();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../imagenes/logo.png">
+    <link rel="icon" href="../imagenes/corazon.png">
     <link rel="stylesheet" href="../../Diseño/estile.css">
     <title>Habitaciones</title>
 </head>
@@ -23,10 +23,10 @@ $total=$trabajo->traerTotalHabitacion();
     <table>
         <thead bgcolor="#8CAAF8">
             <tr>
-                <th colspan="8">
+                <th colspan="9">
                     <h2>Listado general de las habitaciones del hotel</h2>
                 </th>
-                <th><a href="registrar.php"><img src="../../imagenes/mas.png" alt=""></a></th>
+                <th><a href="registrar.php"><img src="../../imagenes/usuarios.png" alt=""></a></th>
             </tr>
         
             <tr>
@@ -53,13 +53,12 @@ $total=$trabajo->traerTotalHabitacion();
                     <td><?php echo $row['nro_hab'];?></td>
                     <td><?php echo $row['estado_hab'];?></td>
                     <td><?php echo $row['descripcion_hab'];?></td>
-                    <td><?php echo $row['imagen'];?></td>
-                    
+                    <td><img class="imagen_hab" src="imagenes/<?php echo $row['imagen'];?>" alt=""></td>
                     <th>
-                        <a href="editar.php?cod=<?php echo $row['cod_tipo_hab'];?>"><img src="../../imagenes/editar.png" alt=""></a>
+                        <a href="editar.php?cod=<?php echo $row['cod_tipo_hab'];?>"><img src="../../imagenes/actualizar.png" alt=""></a>
                     </th>
                     <th>
-                        <a class="eliminar" id="eliminar" onclick='return confirmacion()' href="eliminar.php?cod=<?php echo $row['cod_tipo_hab'];?>"><img src="../../imagenes/dele.png" alt=""></a>
+                        <a class="eliminar" id="eliminar" onclick='return confirmacion()' href="eliminar.php?cod=<?php echo $row['cod_tipo_hab'];?>"><img src="../../imagenes/eliminar.png" alt=""></a>
                     </th>
                 </tr>
             <?php } ?>
@@ -88,17 +87,17 @@ $total=$trabajo->traerTotalHabitacion();
 
     if ($pagina_actual > 1) {
         $pagina_anterior=$pagina_actual-1;
-        echo "<a href='index.php?pagina=$pagina_anterior' class='enlace'>Anterior</a>";
+        echo "<a href='seleccionar.php?pagina=$pagina_anterior' class='enlace'>Anterior</a>";
     }  
 
     if ($pagina_actual < $total_paginas) {
         $siguiente_pagina = $pagina_actual + 1;
-        echo "<a class='enlaces' href='index.php?pagina=$siguiente_pagina'>          Siguiente</a> <br>";
+        echo "<a class='enlaces' href='seleccionar.php?pagina=$siguiente_pagina'>          Siguiente</a> <br>";
     }
     
     if($total_paginas>2){
         for ($i = 1; $i <= $total_paginas; $i++) {
-            echo"<a class='enlace' href='index.php?pagina=".$i."'> ".$i." </a> ";
+            echo"<a class='enlace' href='seleccionar.php?pagina=".$i."'> ".$i." </a> ";
         }
     }
     ?>

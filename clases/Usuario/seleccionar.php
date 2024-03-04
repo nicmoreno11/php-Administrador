@@ -2,7 +2,7 @@
 require_once('../class.php');
 
 $trabajo = new Trabajo();
-$pagina_actual=isset($_GET['pagina'])? $_GET['pagina']:1;
+$pagina_actual=isset($_GET['pagina'])? $_GET['pagina']:1;   
 $resultados_por_pagina=10;
 $inicio=($pagina_actual-1)* $resultados_por_pagina;
 $datos = $trabajo->traerDatos($inicio,$resultados_por_pagina);
@@ -26,7 +26,7 @@ $total=$trabajo->traerTotal();
                 <th colspan="9">
                     <h2>Usuarios del sistema</h2>
                 </th>
-                <th><a href="registrar.php"><img src="../../imagenes/adicionar.png" alt=""></a></th>
+                <th><a href="registrar.php"><img src="../../imagenes/usuarios.png" alt=""></a></th>
             </tr>
         
             <tr>
@@ -55,7 +55,7 @@ $total=$trabajo->traerTotal();
                     <td><?php echo $row['telefono'];?></td>
                     <td><?php echo $row['direccion'];?></td>
                     <td><?php echo $row['cod_usuario'];?></td>
-                    <td><?php echo $row['foto'];?></td>
+                    <td><img class="imagen_hab" src="imagenes_usu/<?php echo $row['foto'];?>" alt=""></td>
                     <th>
                         <a href="editar.php?cod=<?php echo $row['correo_electronico'];?>"><img src="../../imagenes/actualizar.png" alt=""></a>
                     </th>

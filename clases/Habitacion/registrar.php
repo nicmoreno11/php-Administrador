@@ -5,13 +5,17 @@ $dato=new Trabajo();
 if(isset($_POST['Enviar'])){
     $codigo=$_POST['codigo'];
     $numero=$_POST['numero'];
-    $tipo=$_POST['tipo'];
+    $tipoHabitacion=$_POST['tipo'];
     $capacidad=$_POST['capacidad'];
     $precio=$_POST['precio'];
     $estado=$_POST['estado'];
     $descripcion=$_POST['descripcion'];
-    $imagen=$_POST['imagen'];
-    $valor=$dato->RegistrarHabitacion($codigo, $numero, $tipo, $capacidad, $precio, $estado, $descripcion, $imagen);
+    $imagen=$_FILES['imagen']['name'];
+    if(isset($imagen) && $imagen!=""){
+        $tipo=$_FILES['imagen']['type'];
+        $temp=$_FILES['imagen']['tmp_name'];
+        $valor=$dato->insertarHabitacion($codigo, $numero, $tipoHabitacion, $capacidad, $precio, $estado, $descripcion, $imagen,$temp);
+    }
 }
 else{
     
@@ -28,7 +32,7 @@ else{
     <title>Ingresar habitación</title>
 </head>
 <body>
-    <form method="POST" class="form_hab">
+    <form method="POST" class="form_hab" enctype="multipart/form-data">
     <div class="contenedor">
         <h1>Registro de habitación</h1>
         <label for="">Código tipo de habitación</label>
@@ -36,10 +40,12 @@ else{
         <label for="">Número de habitación</label>
         <input class="casilla" type="number" name="numero" id="">
         <label for="">Tipo de habitación</label>
-        <select class="casilla" name="tipo" id="" required>
+        <select class="casilla" name="tipo" id="">
             <option value="Sencilla">Sencilla</option>
             <option value="Doble">Doble</option>
             <option value="Twin">Twin</option>
+            <option value="Triple">Triple</option>
+            <option value="Familiar">Familiar</option>
         </select>
         <label for="">Capacidad</label>
         <input class="casilla" type="number" name="capacidad" id="">
@@ -54,8 +60,8 @@ else{
         <label for="">Descripción</label>
         <textarea class="casilla" name="descripcion" id="" cols="10" rows="0"></textarea>
         <label for="">Imagen</label>
-        <input type="file" class="casilla" name="imagen">
-        <input type="submit" class="casilla" name="Enviar">
+        <input type="file" name="imagen" class="img">
+        <input class="casilla" type="submit" value="Enviar" name="Enviar">
         </div>
     </form>
 

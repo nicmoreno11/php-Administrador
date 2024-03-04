@@ -1,6 +1,7 @@
 <?php
 require_once("conexion.php");
 //require_once('path/to/decrypt.php')
+
 class Trabajo extends Conexion{
     //private $datos;
     private $conexion;
@@ -11,55 +12,54 @@ class Trabajo extends Conexion{
         $this->conexion=$this->conexion->obtenerConexion();
     }
 
-    public function RegistrarHabitacion(string $codigo, string $numero, string $tipo, string $capacidad, string $precio, string $estado, string $descripcion, string $imagen):int{
+    public function insertarHabitacion(string $codigo, string $numero, string $tipoHabitacion, string $capacidad, string $precio, string $estado, string $descripcion, string $imagen, string $temp){
         $sql="INSERT INTO tipo_habitacion VALUES(:cod,:tip,:cap,:pre)";
         $sql2="INSERT INTO habitacion VALUES(:nro,:cod,:est,:descp,:img)";
         $consult=$this->conexion->prepare($sql);
         $consult2=$this->conexion->prepare($sql2);
         $consult->bindValue(":cod",$codigo);
-        $consult->bindValue(":tip",$tipo);
+        $consult->bindValue(":tip",$tipoHabitacion);
         $consult->bindValue(":cap",$capacidad);
         $consult->bindValue(":pre",$precio);
         $consult2->bindValue(":cod",$codigo);
         $consult2->bindValue(":nro",$numero);
         $consult2->bindValue(":est",$estado);
         $consult2->bindValue(":descp",$descripcion);
-        $consult2->bindValue(":img",$imagen);
+        $consult2->bindValue(":img", $imagen);
         $resultado=$consult->execute();
         $resultado2=$consult2->execute();
 
         if ($resultado>0){
             if($resultado2>0){
+                move_uploaded_file($temp, 'C:/xampp/htdocs/Reserva/clases/Habitacion/imagenes/'.$imagen);
                 echo "<script type='text/javascript'>
-            alert('Habitacion registrada correctamente...');
-            window.location='seleccionar.php';
-            </script>";
-        
+                    alert('Registro adicionado correctamente...');
+                    window.location='seleccionar.php';
+                    </script>";
+                
             }
         else{
             echo "<script type='text/javascript'>
-			echo ('error En la asignacion del la habitacion.....');
+			echo ('error En la asignacion del registro.....');
 			window.location='seleccionar.php';
 			</script>";
         }
     }
-
-
 }
 
-    public function insertarUsuario(string $correo, string $contraseña, string $imagen, string $num_doc, string $tipo_doc, string $nombres, string $apellidos, string $telefono, string $direccion, string $tipo_usuario):int{
+    public function insertarUsuario(string $correo, string $contraseña, string $foto, string $num_doc, string $tipo_doc, string $nombres, string $apellidos, string $telefono, string $direccion, string $tipo_usuario):int{
         $password=PASSWORD_HASH($contraseña,PASSWORD_DEFAULT,array("cost"=>14));
-        $sql="INSERT INTO usuarios VALUES (:em, :pass, :imagen)";
+        $sql="INSERT INTO usuarios VALUES (:em, :pass, :foto)";
         $sql2="INSERT INTO persona VALUES(:num,:tip_doc,:nom,:ap,:em,:tel,:dir,:tip)";
         $consult=$this->conexion->prepare($sql);
         $consult2=$this->conexion->prepare($sql2);
         $consult->bindValue(":em",$correo);
         $consult->bindValue(":pass",$password);
-        $consult->bindValue(":imagen", $imagen);
+        $consult->bindValue(":foto", $foto);
         $consult2->bindValue(":num",$num_doc);
         $consult2->bindValue(":tip_doc",$tipo_doc);
         $consult2->bindValue(":nom",$nombres);
-        $consult2->bindValue(":ap",$apellidos);
+        $consult2->bindValue(":ap",$apellidos); 
         $consult2->bindValue(":em",$correo);
         $consult2->bindValue(":tel",$telefono);
         $consult2->bindValue(":dir",$direccion);
@@ -311,7 +311,7 @@ class Trabajo extends Conexion{
         $consult=$this->conexion->prepare($sql);
         $consult2=$this->conexion->prepare($sql2);
         $consult->bindParam(":em",$d1);
-        $consult->bindParam(':correo', $d1, PDO::PARAM_STR);
+        $consult->bindParam(':correo', $v1, PDO::PARAM_STR);
         $consult->bindParam(":pass",$d2);
         $consult2->bindParam(":num",$d3);
         $consult2->bindParam(":tip",$d4);
@@ -350,7 +350,6 @@ class Trabajo extends Conexion{
                 }   
             }
     }
-
 }
 ?>
 <style>

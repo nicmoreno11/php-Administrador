@@ -8,7 +8,6 @@
     <link rel="icon" href="../imagenes/logo.png">
     <link rel="stylesheet" href="../Diseño/Admin.css">
 </head>
-<!-- Pagina vista del Administrador falta añadir Servicios y Factura aunque las tarjetas ya están-->
 <body>
     <header>
     <a href="opciones.php"><img src="../imagenes/logo.png" alt="" class="logo"></a>
@@ -17,13 +16,13 @@
                 <li><a href="Usuario/seleccionar.php">Usuarios</a></li>
                 <li><a href="Habitacion/seleccionar.php">Habitaciones</a> </li>
                 <li><a href="Reserva/seleccionar.php">Reservas</a></li>
-                <li><a href="Servicios/seleccionar.php">Servicios</a></li>
+                <li><a href="">Servicios</a></li>
                 <li><a href="../perfil.php">Mi Perfil</a></li> <!--- Actualizar diseño del perfil de Administrador y tambien que pueda actualizar su perfil desde el perfil--->
-                <li><a href="../index.php">Cerrar Sesión</a></li> <!--- Salir a la pagina web del hotel no a al inicio de sesion--->
-            </ul>
+                <li><a href="../index.php">Cerrar Sesion</a></li>
         </nav>
     </header>
     <div class="contenido">
+        <p>Bienvenido<?php ?></p>
         <p>Registra nuevos usuarios, habitaciones y reservas en el sistema y también gestionar los servicios del hotel y la facturación.</p><a href="https://www.sena.edu.co/es-co/sena/Paginas/quienesSomos.aspx">Nuestra pagina web</a> <!--- Actualizar para que redireccione a la pagian web del hotel--->
     </div>
     <div class="container">
@@ -50,8 +49,8 @@
         <div class="card">
             <img src="../imagenes/restaurante.png" alt="">
             <h4>Servicios</h4>
-            <p>Registrar los servicios que van a estar disponibles dentro del hotel</p>
-            <a href="./Servicios/registrar_serv.php"><input type="button" value="Ver"></a>
+            <p>Registrar, Actualizar y Eliminar los servicios que van a estar disponibles dentro del hotel</p>
+            <a href="./Servicios/servicios.php"><input type="button" value="Ver"></a>
         </div>
         <!--- Se adiciono servicios a la interfaz del administrador para que pueda ver los servicios disponibles que hay en el hotel -->
 
@@ -63,12 +62,12 @@
         </div>
 
         <div class="card">
-            <img src="" alt="">
+            <img src="../imagenes/mobiliario.png" alt="">
             <h4>Mobiliario</h4>
             <p>Aqui se encuentra la información de los muebles de cada habitación del hotel, el nombre y el estado del mueble</p>
             <a href=""><input type="button" value="Ver"></a>
         </div>
-        <!--- Se agrego el modeulo mobiliario en la interfaz del administrador --->
+        <!--- Se agrego el modeulo mobiliario en la interfaz del administrador y falta hacer el crud del administrador  --->
     </div>
     <footer class="piepag">
          <section class="informacion">
@@ -91,8 +90,8 @@
         <div class="terminos">
             <p>Terms & Conditions / Privacy & Cookie Statement</p>
             <p>© 2024 
-            All Rights Reserved | Hotel Aurora Oasis | Powered by Cloudbeds</p>
+            All Rights Reserved | Hotel Aurora Oasis | ° |  Powered by Cloudbeds</p>
         </div>
         </footer> 
 </body>
-</html
+</html>
