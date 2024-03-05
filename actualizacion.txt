@@ -15,4 +15,5 @@ ACTUALIZADO:
 
 - > Se cambio a la base de datos actualizada. Ya que un usuario puede realizar varias reservas.
 - > La imagen en la interfaz de habitaciones se puede ver cuando se le coloca el cursor encima. 
--> Ya se pueden observar imagenes en las tablas de cada modulo en la de habitaciones y usuarios. 
+- > Ya se pueden observar imagenes en las tablas de cada modulo en la de habitaciones y usuarios. 
+- > Ya actulizan las iamgenes en el modulo de habitaciones. 
