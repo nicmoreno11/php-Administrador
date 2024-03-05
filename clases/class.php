@@ -248,9 +248,9 @@ class Trabajo extends Conexion{
         return $result;
     }
 
-    public function actualizar_habitacion(string $id, string $d2, string $d3, string $d4, string $d5, string $d6, string $d7):int{
+    public function actualizar_habitacion(string $id, string $d2, string $d3, string $d4, string $d5, string $d6, string $d7, string $d8):int{
         $sql="UPDATE tipo_habitacion SET cod_tipo_hab=:cod, nom_tipo_hab=:nom, capacidad=:cap, valor_base=:valor WHERE cod_tipo_hab=:cod";
-        $sql2="UPDATE habitacion SET nro_hab=:nro, cod_tipo_hab=:cod, estado_hab=:estado, descripcion_hab=:descp WHERE nro_hab=:nro";
+        $sql2="UPDATE habitacion SET nro_hab=:nro, cod_tipo_hab=:cod, estado_hab=:estado, descripcion_hab=:descp, imagen=:img WHERE nro_hab=:nro";
         $consult=$this->conexion->prepare($sql);
         $consult2=$this->conexion->prepare($sql2);
         $consult->bindParam(":cod",$id);
@@ -261,12 +261,14 @@ class Trabajo extends Conexion{
         $consult2->bindParam(":cod",$id);
         $consult2->bindParam(":estado",$d6);
         $consult2->bindParam(":descp",$d7);
+        $consult2->bindParam(":img",$d8);
+
         $resultado=$consult->execute();
         $resultado2=$consult2->execute();
         if($resultado>0){
             if($resultado2>0){
             echo "<script type='text/javascript'>
-			alert ('Usuario Actualizado Correctamente...');
+			alert ('Habitacion Actualizada Correctamente...');
 			window.location='seleccionar.php';
 		    </script>";
             }

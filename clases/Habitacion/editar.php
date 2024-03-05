@@ -10,8 +10,8 @@ if(isset($_POST['Enviar'])){
     $d5=$_POST['precio'];
     $d6=$_POST['estado'];
     $d7=$_POST['descripcion'];
-    
-    $valor=$valo->actualizar_habitacion($id,$d2,$d3,$d4,$d5,$d6,$d7);
+    $d8=$_POST['imagen'];
+    $valor=$valo->actualizar_habitacion($id,$d2,$d3,$d4,$d5,$d6,$d7,$d8);
 }
 if(isset($_GET['cod'])){
     $v1=$_GET['cod'];
@@ -26,6 +26,7 @@ if(isset($_GET['cod'])){
     $d5=$datos[0]["nro_hab"];
     $d6=$datos[0]["estado_hab"];
     $d7=$datos[0]["descripcion_hab"];
+    $d8=$datos[0]["imagen"];
 }
 ?>
 <!DOCTYPE html>
@@ -99,9 +100,10 @@ if(isset($_GET['cod'])){
         </select>
         <label for="">Descripción</label>
         <textarea class="casilla" name="descripcion" id="" cols="10" rows="0" values="<?php echo $d7;?>"></textarea>
+        <label for="">Imagen</label>
+        <input type="file" name="imagen" class="casilla" value="<?php echo $d8;?>">
         <input class="casilla" type="submit" value="Enviar" name="Enviar">
         </div>
     </form>
-
 </body>
 </html>
