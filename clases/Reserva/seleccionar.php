@@ -26,7 +26,7 @@ $total=$trabajo->traerTotalReserva();
                 <th colspan="7">
                     <h2>Reservas</h2>
                 </th>
-                <th><a href="registrar.php"><img src="../../imagenes/Adicionar.png" alt=""></a></th>
+                <th><a href="registrar.php"><img src="../../imagenes/calendario.png" alt=""></a></th>
             </tr>
         
             <tr>

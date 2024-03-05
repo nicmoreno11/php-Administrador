@@ -55,7 +55,7 @@ $total=$trabajo->traerTotal();
                     <td><?php echo $row['telefono'];?></td>
                     <td><?php echo $row['direccion'];?></td>
                     <td><?php echo $row['cod_usuario'];?></td>
-                    <td><img class="imagen_hab" src="imagenes_usu/<?php echo $row['foto'];?>" alt=""></td>
+                    <td><img class="imagen_usu" src="imagenes_usu/<?php echo $row['foto'];?>" alt=""></td>
                     <th>
                         <a href="editar.php?cod=<?php echo $row['correo_electronico'];?>"><img src="../../imagenes/actualizar.png" alt=""></a>
                     </th>

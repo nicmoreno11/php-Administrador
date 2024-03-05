@@ -3,7 +3,6 @@ require_once('../class.php');
 $dato=new Trabajo;
 //$valor=$dato->obtenerValor();
 if(isset($_POST['Enviar'])){
-    $cod_reserva=$_POST['cod_reserva'];
     $fecha_inicio=$_POST['fecha_inicio'];
     $fecha_fin=$_POST['fecha_fin'];
     $precio=$_POST['precio'];
@@ -11,6 +10,8 @@ if(isset($_POST['Enviar'])){
     $num_doc=$_POST['num_doc'];
 
     $datos=$dato->registrarReserva($fecha_inicio, $fecha_fin, $precio, $cod_tipo, $num_doc);
+
+    $reserva_activa = $dato->verificarReservaActiva($num_doc);
 }
 ?>
 
@@ -25,8 +26,6 @@ if(isset($_POST['Enviar'])){
 <body>
     <form action="" method="POST">
         <h1>Registro reserva</h1>
-        <label for="">Codigo Reserva</label>
-        <input type="text" name="cod_reserva" class="casilla" id="">
         <label for="">Fecha inicio</label>
             <input type="date" name="fecha_inicio" id="" class="casilla">
         <label for="">Fecha fin</label>

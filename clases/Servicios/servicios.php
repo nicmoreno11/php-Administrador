@@ -12,7 +12,7 @@
     session_start();
     ?>
     <header>
-    <a href="../opciones.php"><img src="../../imagenes/restaurante.png" alt="" class="logo"></a> 
+    <a href="../opciones.php"><img src="../../imagenes/logo.png" alt="" class="logo"></a> 
         <nav class="menu">
             <ul class="menu-principal">
                 <li><a href="../Reserva/reserva.php">Reserva</a></li>

@@ -65,3 +65,8 @@ tbody tr:nth-child(even){
 .enlaces:hover{
     color: #2053d3;
 }
+
+.imagen_hab:hover {
+    transform: scale(7.2);
+    transition: transform 0.2s; 
+}
