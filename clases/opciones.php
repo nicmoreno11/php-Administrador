@@ -22,7 +22,7 @@
         </nav>
     </header>
     <div class="contenido">
-        <p>Bienvenido<?php ?></p>
+        <p>Bienvenido Nicolas Moreno</p>
         <p>Registra nuevos usuarios, habitaciones y reservas en el sistema y también gestionar los servicios del hotel y la facturación.</p><a href="https://www.sena.edu.co/es-co/sena/Paginas/quienesSomos.aspx">Nuestra pagina web</a> <!--- Actualizar para que redireccione a la pagian web del hotel--->
     </div>
     <div class="container">
@@ -90,7 +90,7 @@
         <div class="terminos">
             <p>Terms & Conditions / Privacy & Cookie Statement</p>
             <p>© 2024 
-            All Rights Reserved | Hotel Aurora Oasis | ° |  Powered by Cloudbeds</p>
+            All Rights Reserved | Hotel Aurora Oasis | | Powered by Cloudbeds</p>
         </div>
         </footer> 
 </body>

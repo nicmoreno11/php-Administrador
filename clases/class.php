@@ -82,9 +82,9 @@ class Trabajo extends Conexion{
             }
     }
     public function registrarReserva(string $fecha_inicio, string $fecha_fin, string $precio, string $cod_tipo, string $num_doc):int{
-        $sql="INSERT INTO reserva(fecha_inicio, fecha_fin, precio, cod_tipo_hab, num_doc) VALUES (:fecha_ini, :fecha_f, :pre, :cod_tip, :num)";
+        $sql="INSERT INTO reserva(cod_reserva, fecha_inicio, fecha_fin, precio, cod_tipo_hab, num_doc) VALUES (:cod, :fecha_ini, :fecha_f, :pre, :cod_tip, :num)";
         $consult=$this->conexion->prepare($sql);
-        //$consult->bindValue(':cod',$cod_reserva);
+        $consult->bindValue(':cod',$cod_reserva);
         $consult->bindValue(':fecha_ini',$fecha_inicio);
         $consult->bindValue(':fecha_f',$fecha_fin);
         $consult->bindValue(':pre',$precio);
