@@ -35,13 +35,16 @@ $row=mysqli_fetch_assoc($resultado);
                 <li><a href="Usuario/seleccionar.php">Usuarios</a></li>
                 <li><a href="Habitacion/seleccionar.php">Habitaciones</a> </li>
                 <li><a href="Reserva/seleccionar.php">Reservas</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="../perfil.php">Mi Perfil</a></li> 
-                <li><a href="../index.php">Cerrar Sesion</a></li>
+                <li><a href="Servicios/seleccionar.php">Servicios</a></li>
+                <li><a href="../perfil.php">Mi Perfil</a>
+                <ul class="submenu">
+                    <li><a href="../index.php">Salir</a></li>
+                </ul>
+            </ul>
         </nav>
     </header>
     <div class="contenido">
-        <p>Bienvenido <?php /*echo $row['nombres'] ." ".$row['apellidos']*/?></p>
+        <p>Bienvenido <?php /*echo $row['nombres'] ." ".$row['apellidos']*/?></p> <!--- Se le da  una bienvenida a la persona que ingrese a la interfaz del administrador --->
         <p>Registra nuevos usuarios, habitaciones y reservas en el sistema y también gestionar los servicios del hotel y la facturación.</p><a href="https://www.sena.edu.co/es-co/sena/Paginas/quienesSomos.aspx">Nuestra pagina web</a> <!--- Actualizar para que redireccione a la pagian web del hotel--->
     </div>
     <div class="container">
@@ -68,8 +71,8 @@ $row=mysqli_fetch_assoc($resultado);
         <div class="card">
             <img src="../imagenes/restaurante.png" alt="">
             <h4>Servicios</h4>
-            <p>Registrar, Actualizar y Eliminar los servicios que van a estar disponibles dentro del hotel</p>
-            <a href="./Servicios/servicios.php"><input type="button" value="Ver"></a>
+            <p>Registrar y Consultar los servicios que van a estar disponibles dentro del hotel</p>
+            <a href="./Servicios/registrar_serv.php"><input type="button" value="Registrar"></a>
         </div>
         <!--- Se adiciono servicios a la interfaz del administrador para que pueda ver los servicios disponibles que hay en el hotel -->
 
@@ -79,14 +82,6 @@ $row=mysqli_fetch_assoc($resultado);
             <p>Aquí estarán los detalles de cada factura con su respectiva política de privacidad de datos.</p>
             <a href=""><input type="button" value="Ver"></a>
         </div>
-
-        <div class="card">
-            <img src="../imagenes/mobiliario.png" alt="">
-            <h4>Mobiliario</h4>
-            <p>Aqui se encuentra la información de los muebles de cada habitación del hotel, el nombre y el estado del mueble</p>
-            <a href=""><input type="button" value="Ver"></a>
-        </div>
-        <!--- Se agrego el modeulo mobiliario en la interfaz del administrador y falta hacer el crud del administrador  --->
     </div>
     <footer class="piepag">
          <section class="informacion">

@@ -45,7 +45,37 @@ class Trabajo extends Conexion{
 			</script>";
         }
     }
+    
 }
+    public function insertarServicio(string $cod_servicio, string $num_doc_cliente, string $id_rest,string $nom_producto, string $valor_rest){
+        $sql = "INSERT INTO servicios_adicionales VALUES(:cod_serv, :doc_cli)";
+        $sql2 = "INSERT INTO restaurante VALUES(:cod_serv, :id_res, :nom_pro_serv, :valor)";
+        $consult=$this->conexion->prepare($sql);
+        $consult2=$this->conexion->prepare($sql2);
+        $consult->bindValue(":cod_serv",$cod_servicio);
+        $consult->bindValue(":doc_cli",$num_doc_cliente);
+        $consult2->bindValue(":id_res",$id_rest);
+        $consult2->bindValue(":cod_serv",$cod_servicio);
+        $consult2->bindValue(":nom_pro_serv",$nom_producto);
+        $consult2->bindValue(":valor",$valor_rest);
+        $resultado=$consult->execute();
+        $resultado2=$consult2->execute();
+
+        if($resultado>0){
+            if($resultado2>0){
+                echo "<script type='text/javascript'>
+                alert('Servicio adicionado correctamente...');
+                window.location='../opciones.php';
+                </script>";
+            }
+        }
+        else{
+            echo "<script type='text/javascript'>
+            alert('Servicio adicionado correctamente...');
+            window.location='../opciones.php';
+            </script>";
+        }
+    }
 
     public function insertarUsuario(string $correo, string $contraseña, string $foto, string $num_doc, string $tipo_doc, string $nombres, string $apellidos, string $telefono, string $direccion, string $tipo_usuario):int{
         $password=PASSWORD_HASH($contraseña,PASSWORD_DEFAULT,array("cost"=>14));
@@ -109,6 +139,31 @@ class Trabajo extends Conexion{
         $sql="SELECT * FROM tipo_persona";
         $consult=$this->conexion->prepare($sql);
         $consult->execute();
+        $result=$consult->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function TipoServicio(){
+        $sql = "SELECT * FROM servicios_adicionales";
+        $consult=$this->conexion->prepare($sql);
+        $result=$consult->fetchAll(PDO::FETCH_ASSOC);
+        $consult->execute();
+        return $result;
+
+    }
+
+    public function traerServicio(){
+        $sql = "SELECT COUNT(*) AS total FROM servicios_adicionales";
+        $consult=$this->conexion->prepare($sql);
+        $total_resultados=$consult->fetchColumn();
+        return $total_resultados;    
+    }
+
+    public function DatoServicios($inicio, $resultado_pagina){
+        $sql="SELECT * FROM servicios_adicionales JOIN restaurante ON servicios_adicionales.cod_serv=restaurante.cod_serv ORDER BY nom_pro_serv LIMIT :inic, :result";
+        $consult=$this->conexion->prepare($sql);
+        $consult->bindValue(':inic',$inicio,PDO::PARAM_INT);
+        $consult->bindValue(':result',$resultado_pagina,PDO::PARAM_INT);
         $result=$consult->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
