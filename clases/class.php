@@ -148,15 +148,18 @@ class Trabajo extends Conexion{
         $consult=$this->conexion->prepare($sql);
         $consult->bindValue(':inic',$inicio,PDO::PARAM_INT);
         $consult->bindValue(':result',$resultado_pagina,PDO::PARAM_INT);
-        $result=$consult->fetchAll(PDO::FETCH_ASSOC);
+        $consult->execute(); // Ejecutar la consulta
+        $result=$consult->fetchAll(PDO::FETCH_ASSOC); // Recuperar los resultados después de ejecutar la consulta
         return $result;
     }
     public function VerServicios(){
         $sql="SELECT COUNT(*) AS total FROM restaurante";
         $consult=$this->conexion->query($sql);
-        $total_resultados=$consult->fetchColumn();
+        $consult->execute(); // Ejecutar la consulta
+        $total_resultados=$consult->fetchColumn(); // Recuperar los resultados después de ejecutar la consulta
         return $total_resultados;
     }
+    
         public function traerDatos($inicio,$resultados_por_pagina){
         //$pagina_actual
         $sql="SELECT * FROM usuarios JOIN persona ON usuarios.correo_electronico=persona.correo_electronico ORDER BY nombres LIMIT :inicio,:resultados";

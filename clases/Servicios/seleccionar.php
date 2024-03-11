@@ -38,7 +38,7 @@ $total=$trabajo->VerServicios();
                     <tr>
                         <td><?php echo $row['id_rest'];?></td>
                         <td><?php echo $row['cod_servicio'];?></td>
-                        <td><?php echo $row['nom_producto'];?></td>
+                        <td><?php echo $row['nom_producto_rest'];?></td>
                         <td><?php echo $row['valor'];?></td>
                     </tr>
                 <?php }?>
@@ -48,7 +48,7 @@ $total=$trabajo->VerServicios();
 
     <div style="text-align: center;">
     <a href="../opciones.php" class="linkregreso">Regresar</a>
-    <?php
+    <?php 
     
     $total_paginas=ceil($total/$resultado_pagina);
 
