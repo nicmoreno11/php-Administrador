@@ -5,7 +5,7 @@ $pagina_actual=isset($_GET['pagina'])? $_GET['pagina']:1;
 $resultado_pagina=10;
 $inicio=($pagina_actual-1)* $resultado_pagina;
 $datos=$trabajo->DatoServicios($inicio,$resultado_pagina);
-$total=$trabajo->traerServicio();
+$total=$trabajo->VerServicios();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,19 +27,17 @@ $total=$trabajo->traerServicio();
                 </tr>
 
                 <tr>
-                    <th>Codigo Servicio</th>
-                    <th>Numero de documento</th>
                     <th>ID restaurante</th>
-                    <th>Nombre Producto</th>
+                    <th>Codigo Servicio</th>
+                    <th>Nombre del producto</th>
                     <th>Valor</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach($datos as $row) { ?>
                     <tr>
-                        <td><?php echo $row['cod_servicio'];?></td>
-                        <td><?php echo $row['num_doc_cliente'];?></td>
                         <td><?php echo $row['id_rest'];?></td>
+                        <td><?php echo $row['cod_servicio'];?></td>
                         <td><?php echo $row['nom_producto'];?></td>
                         <td><?php echo $row['valor'];?></td>
                     </tr>

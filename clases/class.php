@@ -142,32 +142,22 @@ class Trabajo extends Conexion{
         $result=$consult->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
-
-    public function TipoServicio(){
-        $sql = "SELECT * FROM servicios_adicionales";
-        $consult=$this->conexion->prepare($sql);
-        $result=$consult->fetchAll(PDO::FETCH_ASSOC);
-        $consult->execute();
-        return $result;
-
-    }
-
-    public function traerServicio(){
-        $sql = "SELECT COUNT(*) AS total FROM servicios_adicionales";
-        $consult=$this->conexion->prepare($sql);
-        $total_resultados=$consult->fetchColumn();
-        return $total_resultados;    
-    }
-
+    
     public function DatoServicios($inicio, $resultado_pagina){
-        $sql="SELECT * FROM servicios_adicionales JOIN restaurante ON servicios_adicionales.cod_serv=restaurante.cod_serv ORDER BY nom_pro_serv LIMIT :inic, :result";
+        $sql="SELECT * FROM servicios_adicionales JOIN restaurante ON servicios_adicionales.cod_servicio=restaurante.cod_servicio ORDER BY id_rest LIMIT :inic, :result";
         $consult=$this->conexion->prepare($sql);
         $consult->bindValue(':inic',$inicio,PDO::PARAM_INT);
         $consult->bindValue(':result',$resultado_pagina,PDO::PARAM_INT);
         $result=$consult->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
-    public function traerDatos($inicio,$resultados_por_pagina){
+    public function VerServicios(){
+        $sql="SELECT COUNT(*) AS total FROM restaurante";
+        $consult=$this->conexion->query($sql);
+        $total_resultados=$consult->fetchColumn();
+        return $total_resultados;
+    }
+        public function traerDatos($inicio,$resultados_por_pagina){
         //$pagina_actual
         $sql="SELECT * FROM usuarios JOIN persona ON usuarios.correo_electronico=persona.correo_electronico ORDER BY nombres LIMIT :inicio,:resultados";
         $consult=$this->conexion->prepare($sql);
