@@ -76,7 +76,6 @@ class Trabajo extends Conexion{
             </script>";
         }
     }
-
     public function insertarUsuario(string $correo, string $contraseña, string $foto, string $num_doc, string $tipo_doc, string $nombres, string $apellidos, string $telefono, string $direccion, string $tipo_usuario):int{
         $password=PASSWORD_HASH($contraseña,PASSWORD_DEFAULT,array("cost"=>14));
         $sql="INSERT INTO usuarios VALUES (:em, :pass, :foto)";

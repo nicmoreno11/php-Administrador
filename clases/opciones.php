@@ -23,17 +23,16 @@ $row=mysqli_fetch_assoc($resultado);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="icon" href="../imagenes/logo.png">
     <link rel="stylesheet" href="../Diseño/Admin.css">
 </head>
 <body>
     <header>
-    <a href="../HotelD/index.php"><img src="../imagenes/logo.png" alt="" class="logo"></a>
+    <a href="#"><img src="../imagenes/logo.png" alt="" class="logo"></a>
         <nav class="menu"> 
             <ul class="menu-principal">
                 <li><a href="Usuario/seleccionar.php">Usuarios</a></li>
-                <li><a href="Habitacion/seleccionar.php">Habitaciones</a> </li>
+                <li><a href="Habitacion/seleccionar.php">Habitaciones</a></li>
                 <li><a href="Reserva/seleccionar.php">Reservas</a></li>
                 <li><a href="Servicios/seleccionar.php">Servicios</a></li>
                 <li><a href="../perfil.php">Mi Perfil</a>
@@ -83,29 +82,5 @@ $row=mysqli_fetch_assoc($resultado);
             <a href=""><input type="button" value="Ver"></a>
         </div>
     </div>
-    <footer class="piepag">
-         <section class="informacion">
-            <h3>Ubicación</h3>
-            <p>Soacha Cundinamarca
-            <p>Calle 30</p></section>
-        
-        <section class="informacion2">
-            <h3>Contacto</h3>
-            <a href=""><p>32569785211</p></a>
-            <a href="https://www.google.com/intl/es-419/gmail/about/"><p>administrador@sena.edu.co</p></a> <!--- No tener en cuenta el enlace a la pagina de gmail--->
-        </section>
-        
-        <section class="iconos">
-            <h3>Nuestras redes</h3>
-            <a href="https://web.facebook.com/sena.soacha/?locale=es_LA&_rdc=1&_rdr"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fsenasoachacide"><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-        </section>
-        <div class="terminos">
-            <p>Terms & Conditions / Privacy & Cookie Statement</p>
-            <p>© 2024 
-            All Rights Reserved | Hotel Aurora Oasis | | Powered by Cloudbeds</p>
-        </div>
-        </footer> 
 </body>
 </html>
