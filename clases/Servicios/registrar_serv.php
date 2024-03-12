@@ -16,6 +16,7 @@ if(isset($_POST['Enviar'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio</title>
+    <link rel="icon" href="../../imagenes/logo.png">
     <link rel="stylesheet" href="../../Diseño/estilos.css">
 </head>
 <body>

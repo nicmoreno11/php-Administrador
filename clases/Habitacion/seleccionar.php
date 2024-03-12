@@ -26,7 +26,7 @@ $total=$trabajo->traerTotalHabitacion();
                 <th colspan="9">
                     <h2>Listado general de las habitaciones del hotel</h2>
                 </th>
-                <th><a href="registrar.php"><img src="../../imagenes/usuarios.png" alt=""></a></th>
+                <th><a href="registrar.php"><img src="../../imagenes/habitaciones.png" alt=""></a></th>
             </tr>
         
             <tr>

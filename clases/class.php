@@ -71,7 +71,7 @@ class Trabajo extends Conexion{
         }
         else{
             echo "<script type='text/javascript'>
-            alert('Servicio adicionado correctamente...');
+            alert('Error en registrar el servicio...');
             window.location='../opciones.php';
             </script>";
         }
