@@ -6,10 +6,7 @@ Actualización 04/03/2024
 
 
 PENDIENTE: 
-- > falta hacer el formulario de registro de los servicios y hacer que se muestre como una tabla en la interfaz del administrador.   
-- > No hay interfaz de factras y de servicios falta que el administrador pueda registrar los servicios disponibles en el hotel.
-- > Añadir un bienvenido en la interfaz del administrador.
-- > Falta añadir la interfaz y todo el crud del mobiliario del hotel.
+-> Añadir facturas a la interfaz del administrador
 
 ACTUALIZADO:
 

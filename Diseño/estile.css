@@ -14,7 +14,7 @@ body{
 }
 table{
     width: 90%;
-    background-color: white;
+    background-color: antiquewhite;
     font-family: 'Popins', sans-serif;
     border-collapse: collapse;
 }
@@ -35,7 +35,7 @@ tr{
     margin-left: 15px;
 }
 tbody tr:nth-child(even){
-    background-color: aliceblue;
+    background-color: #ccc;
 }
 .enlace{
     font-family: 'Nunito', sans-serif;

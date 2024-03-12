@@ -14,6 +14,7 @@ $total=$trabajo->VerServicios();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link rel="stylesheet" href="../../Diseño/estile.css">
+    <link rel="icon" href="../../imagenes/logo.png">
 </head>
 <body>
     <div class="contenedor-tabla">
@@ -25,7 +26,6 @@ $total=$trabajo->VerServicios();
                     </th>
                     <th><a href="registrar_serv.php"><img src="../../imagenes/restaurante.png" alt=""></a></th> 
                 </tr>
-
                 <tr>
                     <th>ID restaurante</th>
                     <th>Codigo Servicio</th>
@@ -59,7 +59,7 @@ $total=$trabajo->VerServicios();
 
     if ($pagina_actual < $total_paginas) {
         $siguiente_pagina = $pagina_actual + 1;
-        echo "<a class='enlaces' href='index.php?pagina=$siguiente_pagina'>          Siguiente</a> <br>";
+        echo "<a class='enlaces' href='index.php?pagina=$siguiente_pagina'>         Siguiente</a> <br>";
     }
     
     if($total_paginas>2){
