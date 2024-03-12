@@ -35,10 +35,7 @@ $row=mysqli_fetch_assoc($resultado);
                 <li><a href="Habitacion/seleccionar.php">Habitaciones</a></li>
                 <li><a href="Reserva/seleccionar.php">Reservas</a></li>
                 <li><a href="Servicios/seleccionar.php">Servicios</a></li>
-                <li><a href="../perfil.php">Mi Perfil</a>
-                <ul class="submenu">
-                    <li><a href="../index.php">Salir</a></li>
-                </ul>
+                <li><a href="#">Salir</a></li>
             </ul>
         </nav>
     </header>
