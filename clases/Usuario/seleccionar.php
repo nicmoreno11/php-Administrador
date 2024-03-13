@@ -23,7 +23,7 @@ $total=$trabajo->traerTotal();
     <table>
         <thead bgcolor="#8CAAF8">
             <tr>
-                <th colspan="9">
+                <th colspan="10">
                     <h2>Usuarios del sistema</h2>
                 </th>
                 <th><a href="registrar.php"><img src="../../imagenes/usuarios.png" alt=""></a></th>

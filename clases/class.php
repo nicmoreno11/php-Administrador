@@ -158,6 +158,15 @@ class Trabajo extends Conexion{
         $total_resultados=$consult->fetchColumn(); // Recuperar los resultados después de ejecutar la consulta
         return $total_resultados;
     }
+
+    public function traer_servicios($serv1){
+        $sql="SELECT * FROM restaurante WHERE cod_servicio=:cod";
+        $consult=$this->conexion->prepare($sql);
+        $consult->bindParam(":cod",$serv1, PDO::PARAM_STR);
+        $consult->execute();
+        $result=$consult->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
     
         public function traerDatos($inicio,$resultados_por_pagina){
         //$pagina_actual
@@ -226,6 +235,37 @@ class Trabajo extends Conexion{
 		    </script>";
             }
     }
+    public function actualizar_servicio(string $cod_servicio, string $s1, string $s2, string $s3):int{
+        $sql = "UPDATE restaurante SET id_rest=:id, cod_servicio=:cod_serv, nom_producto_rest=:nom_pro,valor=:valor_rest WHERE cod_servicio=:cod_serv";
+        $consult=$this->conexion->prepare($sql);
+        $consult->bindParam(":cod_serv",$cod_servicio);
+        $consult->bindParam(":id",$s1);
+        $consult->bindParam(":nom_pro",$s2);
+        $consult->bindParam(":valor_rest",$s3);
+        $resultado=$consult->execute();
+        if($resultado>0){
+            echo "<script type='text/javascript'>
+			alert ('Servicio actualizado correctamente...');
+			window.location='seleccionar.php';
+		    </script>";
+        }
+    }
+
+    public function eliminar_servicio(string $cod_serv){
+        $sql="DELETE FROM restaurante WHERE cod_servicio=:cod_serv";
+        $consult=$this->conexion->prepare($sql);
+        $consult->BindValue(':cod_serv',$cod_serv);
+        $resultado=$consult->execute();
+        if ($resultado) {
+            echo "<script type='text/javascript'>
+            alert ('Servicio Eliminado D:...');
+            window.location='seleccionar.php';
+            </script>";
+        } else {
+            echo "Error al eliminar.";
+        }
+    }
+    
     public function eliminarReserva(string $cod){
         $sql="DELETE FROM reserva WHERE cod_reserva= :cod";
         $consult=$this->conexion->prepare($sql);
@@ -345,6 +385,14 @@ class Trabajo extends Conexion{
 		$result=$consult->fetchAll(PDO::FETCH_ASSOC);
 		return $result;
 	}
+
+    /*public function traer_un_servicio($serv1){
+        $sql = "SELECT * FROM servicios_adicionales JOIN restaurante ON servicios_adicionales.cod_servicio=restaurante.cod_servicio  WHERE restaurante.cod_servicio=:cod_serv";
+        $consult=$this->conexion->prepare($sql);
+        $consult->bindParam(':cod_serv', $serv1, PDO::FETCH_ASSOC);
+        $result=$consult->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }*/
     public function traerTipodoc($v1){
         $sql="SELECT tipo_doc FROM persona WHERE correo_electronico=:correo";
         $consult=$this->conexion->prepare($sql);

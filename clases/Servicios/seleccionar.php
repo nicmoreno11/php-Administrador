@@ -21,7 +21,7 @@ $total=$trabajo->VerServicios();
         <table>
             <thead bgcolor=#8CAAF8>
                 <tr>
-                    <th colspan=9>
+                    <th colspan="5">
                         <h2>Servicios</h2>
                     </th>
                     <th><a href="registrar_serv.php"><img src="../../imagenes/restaurante.png" alt=""></a></th> 
@@ -31,6 +31,8 @@ $total=$trabajo->VerServicios();
                     <th>Codigo Servicio</th>
                     <th>Nombre del producto</th>
                     <th>Valor</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +42,12 @@ $total=$trabajo->VerServicios();
                         <td><?php echo $row['cod_servicio'];?></td>
                         <td><?php echo $row['nom_producto_rest'];?></td>
                         <td><?php echo $row['valor'];?></td>
+                        <th>
+                        <a href="editar_serv.php?cod=<?php echo $row['id_rest'];?>"><img src="../../imagenes/actualizar.png" alt=""></a>
+                    </th>
+                    <th>
+                        <a href="eliminar.php?cod=<?php echo $row['id_rest'];?>" onclick='return confirmacion()'><img src="../../imagenes/eliminar.png" alt=""></a>
+                    </th>
                     </tr>
                 <?php }?>
             </tbody>
