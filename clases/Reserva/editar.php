@@ -49,5 +49,16 @@ if(isset($_GET['cod'])){
         <input type="text" name="codigo" id="" value="<?php echo $cod;?>" hidden>
         <input type="submit" value="Enviar" name="Enviar" class="casilla">
     </form>
+    <script>
+    window.onbeforeunload = function() {
+        return "¿Estás seguro de que quieres abandonar la página sin actualizar los datos?";
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('form').addEventListener('submit', function(e) {
+            window.onbeforeunload = null;
+        });
+    });
+</script>
 </body>
 </html>

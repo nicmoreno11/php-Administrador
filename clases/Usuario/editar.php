@@ -96,5 +96,18 @@ if(isset($_GET['cod'])){
         <input type="text" name="direccion" id="" class="casilla" value="<?php echo $d8;?>">
         <input type="submit" value="Enviar" name="Enviar" class="casilla">
     </form>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    window.onbeforeunload = function() {
+        return "¿Estás seguro de que quieres abandonar la página sin actualizar los datos?";
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('form').addEventListener('submit', function(e) {
+            window.onbeforeunload = null;
+        });
+    });
+</script>
+
 </body>
 </html>
